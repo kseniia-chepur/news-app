@@ -1,0 +1,50 @@
+.preview-title {
+  max-width: 90%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 20px auto;
+  text-align: center; 
+}
+
+.preview-img {
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 7px;
+}
+
+.article-preview {
+  margin-bottom: 25%;
+}
+
+.article-preview p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.article-btn {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+  background:  transparent;
+  color:  var(--accent-color); 
+  border: none;
+  cursor: pointer;  
+}
+
+.article-btn:hover {
+  opacity: 0.7;
+}
+
+small {
+  margin: 0 5px;  
+  color:  var(--accent-color);
+}
+
+@media (max-width: 568px) {
+ .preview-title {
+    font-size: 1rem; 
+  }
+  .article-btn {
+    font-size: 1.5rem; 
+  }
+}

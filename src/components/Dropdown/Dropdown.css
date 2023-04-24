@@ -1,0 +1,61 @@
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10% 0 5%;
+  font-size: 0.9rem;
+}
+
+.Dropdown-root { 
+  width: 30%;  
+}
+
+.Dropdown-control {
+  color: #cadefc;  
+  background: none;
+  border: none;
+  border-bottom: 1px solid #cadefc;
+}
+
+.Dropdown-option {
+  color: #cadefc;  
+  background: #575a79;
+}
+
+
+.Dropdown-option:hover {
+  background: #404363;
+  color: #cadefc;  
+}
+
+.Dropdown-option.is-selected {
+  background: #404363;
+  color: #cadefc; 
+  font-weight: 700;
+}
+
+.clear-filter-btn {
+  width: 30%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.9rem;
+  text-align: left;
+  background: transparent;    
+  color: #cadefc;  
+  border: none;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 640px) {
+ .filter-container {
+    margin-top: 15%;
+  }
+  .Dropdown-root { 
+    width: 50%;  
+}
+  .clear-filter-btn {
+    width: 50%;
+  }
+}
