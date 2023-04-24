@@ -1,4 +1,4 @@
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = 'd6d67e644a9f44659862a1ba20e67277';
 
 async function fetchBySearch(query) {
   const apiUrl = `https://newsapi.org/v2/everything?q=${query}&from=${new Date()}&sortBy=publishedAt&pageSize=20&apiKey=${apiKey}`;
