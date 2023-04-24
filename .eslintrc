@@ -5,8 +5,7 @@
     "node": true
   },
   "extends": [
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended" 
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -15,7 +14,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react"],
   "settings": {
     "react": {
       "version": "detect"
