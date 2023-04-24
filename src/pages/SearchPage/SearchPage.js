@@ -43,6 +43,7 @@ export default function SearchPage() {
 
   useEffect(() => {
     getSearchResult(fetchTopHeadlines);
+    // eslint-disable-next-line
   }, []);
 
   async function getPlaceholderImg() {
