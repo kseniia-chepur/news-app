@@ -1,15 +1,28 @@
-const apiKey = 'd6d67e644a9f44659862a1ba20e67277';
-
 async function fetchBySearch(query) {
-  const apiUrl = `https://newsapi.org/v2/everything?q=${query}&from=${new Date()}&sortBy=publishedAt&pageSize=20&apiKey=${apiKey}`;
-  const response = await fetch(apiUrl);
+  const url = `https://newsdata2.p.rapidapi.com/news?language=en&q=${query}`;
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'fb8014d008msh5162e9ab3248304p1a4dfbjsn76add30fc779',
+      'X-RapidAPI-Host': 'newsdata2.p.rapidapi.com',
+    },
+  };
+  const response = await fetch(url, options);
   return response;
 }
 
-async function fetchTopHeadlines() {
-  const apiUrl = ` https://newsapi.org/v2/top-headlines/?sources=techcrunch&pageSize=20&apiKey=${apiKey}`;
-  const response = await fetch(apiUrl);
+async function fetchByDefault() {
+  const url = 'https://newsdata2.p.rapidapi.com/news?q=tech';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'fb8014d008msh5162e9ab3248304p1a4dfbjsn76add30fc779',
+      'X-RapidAPI-Host': 'newsdata2.p.rapidapi.com',
+    },
+  };
+
+  const response = await fetch(url, options);
   return response;
 }
 
-export { fetchBySearch, fetchTopHeadlines };
+export { fetchBySearch, fetchByDefault };

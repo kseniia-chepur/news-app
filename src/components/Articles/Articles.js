@@ -1,22 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import PropTypes, { oneOfType } from "prop-types";
-import dateConverter from "../../helpers/dateConverter";
-import "./Articles.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes, { oneOfType } from 'prop-types';
+import dateConverter from '../../helpers/dateConverter';
+import './Articles.css';
 
 export default function Articles({ data, placeholderImg, sourceFilter }) {
   const displayedArticles = sourceFilter
-    ? data.filter((article) => article.source.name === sourceFilter)
+    ? data.filter((article) => article.source_id === sourceFilter)
     : data;
   const articles = displayedArticles.map((article, i) => {
     return (
       <div key={i} className="article-preview">
         <h3 className="preview-title">{article.title}</h3>
-        <small>{article.source.name}</small>
+        <small className="preview-details">
+          {article.creator} for the <span>{article.source_id}</span>
+        </small>
         <br />
-        <small>{dateConverter(article.publishedAt)}</small>
+        <small className="preview-details">
+          {dateConverter(article.pubDate)}
+        </small>
         <img
-          src={article.urlToImage ? article.urlToImage : placeholderImg}
+          src={article.image_url ? article.image_url : placeholderImg}
           alt={article.title}
           className="preview-img"
         />
@@ -25,11 +29,11 @@ export default function Articles({ data, placeholderImg, sourceFilter }) {
           to={`article/${i + 1}`}
           state={{
             title: article.title,
-            author: article.author,
-            source: article.source.name,
-            date: article.publishedAt,
+            author: article.creator,
+            source: article.source_id,
+            date: article.pubDate,
             content: article.content,
-            img: article.urlToImage ? article.urlToImage : placeholderImg,
+            img: article.image_url ? article.image_url : placeholderImg,
           }}
         >
           <button type="button" className="article-btn">

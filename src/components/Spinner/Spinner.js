@@ -8,7 +8,7 @@ export default function Spinner({ loadingStatus }) {
     <div>
       {loadingStatus && (
         <div className="spinner-container">
-          <BallTriangle stroke="transparent" speed={0.75} fill="#cadefc" />
+          <BallTriangle stroke="transparent" speed={0.75} fill="#E17654" />
         </div>
       )}
     </div>
