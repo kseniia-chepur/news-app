@@ -12,7 +12,7 @@ async function fetchBySearch(query) {
 }
 
 async function fetchByDefault() {
-  const url = 'https://newsdata2.p.rapidapi.com/news?q=tech';
+  const url = 'https://newsdata2.p.rapidapi.com/news?language=en';
   const options = {
     method: 'GET',
     headers: {

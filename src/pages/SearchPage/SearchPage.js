@@ -47,7 +47,7 @@ export default function SearchPage() {
 
   useEffect(() => {
     getSearchResult(fetchByDefault);
-    getPlaceholderImg('tech');
+    getPlaceholderImg('news');
   }, []);
 
   async function getPlaceholderImg(query) {
